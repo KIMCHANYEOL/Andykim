@@ -38,6 +38,6 @@ plt.plot(  list( money['A_MONTH'] ), list( money['HOUSE_PRICE'] ), color='yellow
 plt.xticks(tuple(money['A_MONTH']) )
 plt.title('HOUSE_PRICE')
 
-st.title(':red[U]:blue[S]:white[A]/KOR _Money__' data :dollar:')
+st.title(':red[U]:blue[S]:white[A]/KOR _Money__'data :dollar:')
 st.pyplot(fig)
 st.dataframe(money)
