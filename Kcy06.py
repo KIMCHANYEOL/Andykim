@@ -40,3 +40,4 @@ plt.title('HOUSE_PRICE')
 
 st.pyplot(fig)
 st.dataframe(money)
+st.title('America/Korea _Money_data_ :Green[colors] and emojis :dollar:')
