@@ -1,14 +1,17 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
+import numpy as np
 
 money = pd.read_csv("money_data7.csv")
 
 import streamlit as st
 
-option = st.selectbox(
-    'How would you like to choice year ?',
-    ('2020', '2021', '2022'))
+def  plotting_demo():
+    money = pd.read_csv("money_data7.csv")
+    option = st.selectbox(
+        'How would you like to choice year ?',
+        ('2020', '2021', '2022')))
 
 option2 = int(option)
 
@@ -36,8 +39,17 @@ plt.title('KOSPI')
 plt.subplot(224)
 plt.plot(  list( money['A_MONTH'] ), list( money['HOUSE_PRICE'] ), color='yellow' , marker='o'     ) 
 plt.xticks(tuple(money['A_MONTH']) )
-plt.title('HOUSE_PRICE')
+plt.title('House_Price')
 
 st.title('andy\'s Graph')
 st.pyplot(fig)
 st.dataframe(money)
+
+with st.form(key ='Form1'):
+    with st.sidebar:
+        
+        select_language = st.sidebar.radio('what do you want?', ('line', 'bar', 'pie'))
+        
+        
+if select_language =='line':        
+    plotting_demo()   
