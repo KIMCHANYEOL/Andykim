@@ -44,6 +44,7 @@ def  plotting_demo():
 
     st.pyplot(fig)
     st.dataframe(money)
+    st.title('Chanyeol\'s Graph')
 
 with st.form(key ='Form1'):
     with st.sidebar:
