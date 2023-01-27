@@ -3,11 +3,11 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-#money = pd.read_csv("money_data7.csv")
-
-#st.sidebar.success("Select a demo above.")
-
 def  plotting_demo():
+    
+    uploaded_file = st.file_uploader("Choose a file")
+    money=pd.read_csv(uploaded_file)
+    
     money = pd.read_csv("money_data7.csv")
     option = st.selectbox(
         'How would you like to choice year ?',
@@ -52,5 +52,8 @@ with st.form(key ='Form1'):
         select_language = st.sidebar.radio('What do you want ?', ('line graph', 'bar graph', 'pie graph', 'histogram graph', 'corr graph', 'word cloud', 'box graph'))
         
         
-if select_language =='line graph':        
-    plotting_demo() 
+if select_language =='line graph':
+    try:
+          plotting_demo()  
+    except:
+        pass
