@@ -50,7 +50,7 @@ def bar_chart():
     
     url = "https://sports.news.naver.com/kbaseball/record/index?category=kbo&year="
     
-    years = ['2015', '2016','2017', '2018', '2019', '2020', '2021', '2022']
+    years = ['2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022']
     
     df = pd.DataFrame([]) 
 
@@ -64,7 +64,7 @@ def bar_chart():
     
     option = st.selectbox(
         'How would you like to choice year ?',
-        ('2015', '2016','2017', '2018', '2019', '2020', '2021', '2022'))
+        ('2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'))
 
     option2 = option
 
@@ -84,8 +84,7 @@ def bar_chart():
 
     plt.title( "KBO winrate data", position=(0.5,1.1))
     st.pyplot(fig)
-    st.dataframe(df7)
-    
+        
 st.set_page_config(layout="centered")
     
 with st.form(key ='Form1'):
