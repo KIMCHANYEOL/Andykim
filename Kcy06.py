@@ -91,7 +91,7 @@ def bar_chart():
             </style>
             """
     st.markdown(hide_table_row_index, unsafe_allow_html=True)
-    st.dataframe(df7)
+    st.table(df7)
     
         
 st.set_page_config(layout="centered")
