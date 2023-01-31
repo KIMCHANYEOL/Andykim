@@ -82,7 +82,7 @@ def bar_chart():
     for   num ,   v    in   enumerate( y ):
         plt.text (  num -0.4  ,   v + 0.01 ,  v   )
 
-    plt.title( "year korea baseball winrate data", position=(0.5,1.1))
+    plt.title( "KBO winrate data", position=(0.5,1.1))
     st.pyplot(fig)
     st.dataframe(df7)
 
