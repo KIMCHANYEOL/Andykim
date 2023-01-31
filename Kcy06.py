@@ -85,8 +85,7 @@ def bar_chart():
     plt.title( "KBO winrate data", position=(0.5,1.1))
     st.pyplot(fig)
     st.dataframe(df7)
-    st.hide_index()
-
+    
 st.set_page_config(layout="centered")
     
 with st.form(key ='Form1'):
