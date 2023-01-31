@@ -74,7 +74,7 @@ def bar_chart():
     x = df7.팀
     y = df7.승률
     
-    fig, ax = plt.subplots(figsize=(18,8))
+    fig, ax = plt.subplots(figsize=(21,14))
 
     colors = ['C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7' ,'C8', 'C9', 'C10' ]
     plt.bar(  x,  y,  color= colors ) 
