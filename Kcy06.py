@@ -60,7 +60,7 @@ def bar_chart():
         df = pd.concat([df, df1], axis=0)
     
     baseball = df
-    baseball.팀.replace({'두산':'DS_B','삼성':'SS_L','키움':'KW_H','한화': 'HH_E','롯데':'LT_G','넥센':'NX_H','LG':'LG_T', 'KIA':'KIA_T', 'NC':'NC_D', 'KT':'KT_W','SK':'SK_W','SSG':'SSG_L', 'kt':'kt_w'},inplace=True)
+    baseball.팀.replace({'두산':'DOOSAN','삼성':'SAMSUNG','키움':'KW_H','한화': 'HH_E','롯데':'LT_G','넥센':'NX_H','LG':'LG_T', 'KIA':'KIA_T', 'NC':'NC_D', 'KT':'KT_W','SK':'SK_W','SSG':'SSG_L', 'kt':'kt_w'},inplace=True)
     
     option = st.selectbox(
         'How would you like to choice year ?',
