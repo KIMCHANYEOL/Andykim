@@ -70,7 +70,7 @@ def bar_chart():
 
     st.write('You selected:', option)
 
-    df7  =  baseball[:] [ baseball.년도==option2
+    df7  =  baseball[:] [ baseball.년도==option2 ]
     x = df7.팀
     y = df7.승률
     
@@ -84,7 +84,8 @@ def bar_chart():
 
     plt.title( "KBO winrate data", position=(0.5,1.1))
     st.pyplot(fig)
-    st.dataframe(df7)                 
+    st.dataframe(df7)
+    st.hide_index()
 
 st.set_page_config(layout="centered")
     
