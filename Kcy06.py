@@ -60,7 +60,6 @@ def bar_chart():
         df = pd.concat([df, df1], axis=0)
     
     baseball = df
-    df8 = baseball.style.hide_index()
     baseball.팀.replace({'두산':'D_Bears','삼성':'S_Lions','키움':'K_Heroes','한화': 'H_Eagles','롯데':'L_Giants','넥센':'N_Heroes','LG':'L_Twins', 'KIA':'K_Tigers', 'NC':'N_Dinos', 'KT':'K_Wiz','SK':'S_Wyverns','SSG':'S_Landers', 'kt':'k_wiz'},inplace=True)
     
     option = st.selectbox(
@@ -85,7 +84,15 @@ def bar_chart():
 
     plt.title( "KBO winrate data", position=(0.5,1.1))
     st.pyplot(fig)
-    st.dataframe(df8)
+    hide_table_row_index = """
+            <style>
+            thead tr th:first-child {display:none}
+            tbody th {display:none}
+            </style>
+            """
+    st.markdown(hide_table_row_index, unsafe_allow_html=True)
+    st.table(df7)
+    
         
 st.set_page_config(layout="centered")
     
