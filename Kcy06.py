@@ -97,13 +97,13 @@ def bar_chart():
 with st.form(key ='Form1'):
     with st.sidebar:
         
-        select_language = st.sidebar.radio('What do you want ?', ('line graph', 'bar graph', 'pie graph', 'histogram graph', 'corr graph', 'word cloud', 'box graph'))
+        select_language = st.sidebar.radio('Data Analysis Results', ('Money_rates and House_prices', 'KBO_Rankings and Winning_rates', 'Other Data'))
         
         
-if select_language =='line graph':
+if select_language =='Money_rates and House_prices':
     try:
           plotting_demo()  
     except:
         pass
-elif select_language =='bar graph':
+elif select_language =='KBO_Rankings and Winning_rates':
     bar_chart()
