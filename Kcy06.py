@@ -101,9 +101,9 @@ with st.form(key ='Form1'):
         select_language = st.sidebar.radio('What do you want ?', ('Money_rates and House_prices', 'KBO_Rankings and Winning_rates', 'Other Data'))
         
         
-if select_language =='Money_rates and House prices':
+if select_language =='Money_rates and House_prices':
     plotting_demo()  
 
-elif select_language =='KBO_Ranking and Winning rates':
+elif select_language =='KBO_Ranking and Winning_rates':
     bar_chart()
 
