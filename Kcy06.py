@@ -93,9 +93,7 @@ def bar_chart():
     st.markdown(hide_table_row_index, unsafe_allow_html=True)
     st.table(df7)
     
-        
-st.set_page_config(layout="centered")
-    
+          
 with st.form(key ='Form1'):
     with st.sidebar:
         
