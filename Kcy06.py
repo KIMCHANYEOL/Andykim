@@ -103,8 +103,7 @@ with st.form(key ='Form1'):
         
         
 if select_language =='Money_rates and House prices':
-    try:
-          plotting_demo()  
+    plotting_demo()  
 
 elif select_language =='KBO_Ranking and Winning rates':
     bar_chart()
