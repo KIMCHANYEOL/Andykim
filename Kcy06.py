@@ -99,13 +99,14 @@ st.set_page_config(layout="centered")
 with st.form(key ='Form1'):
     with st.sidebar:
         
-        select_language = st.sidebar.radio('What do you want ?', ('line graph', 'bar graph', 'pie graph', 'histogram graph', 'corr graph', 'word cloud', 'box graph'))
+        select_language = st.sidebar.radio('What do you want ?', ('Money_rates and House_prices', 'KBO_Rankings and Winning_rates', 'Other Data'))
         
         
-if select_language =='line graph':
+if select_language =='Money_rates and House prices':
     try:
           plotting_demo()  
     except:
         pass
-elif select_language =='bar graph':
+elif select_language =='KBO_Ranking and Winning rates':
     bar_chart()
+
