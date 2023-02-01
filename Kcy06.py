@@ -94,16 +94,18 @@ def bar_chart():
     st.table(df7)
     
         
+st.set_page_config(layout="centered")
     
 with st.form(key ='Form1'):
     with st.sidebar:
         
-        select_language = st.sidebar.radio('What do you want ?', ('Money_rates and House_prices', 'KBO_Rankings and Winning_rates', 'Other Data'))
+        select_language = st.sidebar.radio('What do you want ?', ('line graph', 'bar graph', 'pie graph', 'histogram graph', 'corr graph', 'word cloud', 'box graph'))
         
         
-if select_language =='Money_rates and House_prices':
-    plotting_demo()  
-
-elif select_language =='KBO_Rankings and Winning_rates':
+if select_language =='line graph':
+    try:
+          plotting_demo()  
+    except:
+        pass
+elif select_language =='bar graph':
     bar_chart()
-
