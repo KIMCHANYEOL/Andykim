@@ -5,8 +5,8 @@ import numpy as np
 
 def  plotting_demo():
     
-    uploaded_file = st.file_uploader("Choose a file")
-    money=pd.read_csv(uploaded_file)
+    # uploaded_file = st.file_uploader("Choose a file")
+    # money=pd.read_csv(uploaded_file)
     
     money = pd.read_csv("money_data7.csv")
     option = st.selectbox(
@@ -18,6 +18,10 @@ def  plotting_demo():
     st.write('You selected:', option)
 
     money = money[:] [money['A_YEAR']== option2]
+    
+    global aa
+    
+    aa = money
 
     fig, ax = plt.subplots(2,2, figsize=(12,8))
 
@@ -44,7 +48,7 @@ def  plotting_demo():
 
     st.title('Chanyeol\'s Graph')
     st.pyplot(fig)
-    st.dataframe(money)
+    # st.dataframe(money)
     
 def bar_chart():
     
@@ -74,6 +78,10 @@ def bar_chart():
     x = df7.팀
     y = df7.승률
     
+    global bb
+    
+    bb = df7
+    
     fig, ax = plt.subplots(figsize=(12,8))
 
     colors = ['C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7' ,'C8', 'C9', 'C10' ]
@@ -91,7 +99,7 @@ def bar_chart():
             </style>
             """
     st.markdown(hide_table_row_index, unsafe_allow_html=True)
-    st.table(df7)
+    #st.table(df7)
     
           
 with st.form(key ='Form1'):
@@ -101,9 +109,19 @@ with st.form(key ='Form1'):
         
         
 if select_language =='Money_rates and House_prices':
-    try:
-          plotting_demo()  
-    except:
-        pass
+    with tab1:
+        tap1.subheader ("A tap with a chart")
+        plotting_demo()
+        
+    with tap2:
+        tap2.subheader ("A tab with the data")
+        st.dataframe(aa)
+        
 elif select_language =='KBO_Rankings and Winning_rates':
-    bar_chart()
+    with tab1:
+        tap1.subheader ("A tap with a chart")
+        plotting_demo()
+        
+    with tap2:
+        tap2.subheader ("A tab with the data")
+        st.table(bb)
