@@ -112,20 +112,20 @@ if select_language =='Money_rates and House_prices':
     tab1, tab2 = st.tabs(["📈 Chart", "🗃 Data"])
     
     with tab1:
-        tap1.subheader ("A tap with a chart")
+        tab1.subheader ("A tap with a chart")
         plotting_demo()
         
     with tap2:
-        tap2.subheader ("A tab with the data")
+        tab2.subheader ("A tab with the data")
         st.dataframe(aa)
         
 elif select_language =='KBO_Rankings and Winning_rates':
     tab1, tab2 = st.tabs(["📈 Chart", "🗃 Data"])
     
     with tab1:
-        tap1.subheader ("A tap with a chart")
+        tab1.subheader ("A tap with a chart")
         plotting_demo()
         
-    with tap2:
-        tap2.subheader ("A tab with the data")
+    with tab2:
+        tab2.subheader ("A tab with the data")
         st.table(bb)
