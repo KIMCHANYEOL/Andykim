@@ -124,7 +124,7 @@ elif select_language =='KBO_Rankings and Winning_rates':
     
     with tab1:
         tab1.subheader ("A tap with a chart")
-        plotting_demo()
+        bar_chart()
         
     with tab2:
         tab2.subheader ("A tab with the data")
